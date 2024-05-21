@@ -28,7 +28,8 @@
     <div class="background"></div>
 
     <div class="tools-container" id="home">
-      <a href="./dashboard.html"><img src="/src/img/logo-techmarket.png" alt="logo-brand"></a>
+      <a href="./dashboard.html"class="hovering" >
+        <img src="/src/img/logo-techmarket.png" alt="logo-brand"></a>
       <p class="tech">Tech<span class="market"> Market</span></p>
       <div class="search-container">
         <input type="search" placeholder="Find Your Product" class="search-bar">
@@ -61,7 +62,9 @@
 
     <div class="product-container">
       <div class="card-product">
-        <div class="img-product"></div>
+        <div class="img-product" onclick="openProduct()">
+          <img src="/src/img/DXRacer-DRIFTING-SERIES.png" alt="">
+        </div>
         <p>Nama Product</p>
         <p>Rp2.700.000</p>
       </div>
@@ -120,10 +123,7 @@
         <p>Rp2.700.000</p>
       </div>
     </div>
-    <script>
-      function openCart() {
-          window.location.href = 'cart.html'; // Ganti dengan URL halaman keranjang Anda
-      }
-  </script>
+
+    <script src="/Public/scripts/redirect.js"></script>
   </body>
 </html>
