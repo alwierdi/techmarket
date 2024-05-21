@@ -147,6 +147,7 @@ nav {
 
 .product-container .card .layout {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .product-container .card img {
@@ -157,7 +158,6 @@ nav {
 .product-container .card .layout .details-product {
   display: flex;
   align-items: center;
-  width: 100%;
   padding-left: 15px;
 }
 
