@@ -93,6 +93,14 @@ nav {
   padding-top: 10px;
 }
 
+.hovering {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hovering:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
 .tools-container p {
   font-size: 40px;
   font-weight: bold;
