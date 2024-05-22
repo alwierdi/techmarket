@@ -20,7 +20,7 @@ signupButton.addEventListener("click", async (event) => {
 
   try {
     // Kirim data ke backend menggunakan Fetch API
-    const response = await fetch('/api/signup', {
+    const response = await fetch('http://localhost:8080/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
