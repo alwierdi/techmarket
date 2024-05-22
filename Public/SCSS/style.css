@@ -15,7 +15,7 @@ body {
 .navbar-container {
   display: flex;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 nav {
@@ -178,6 +178,8 @@ nav {
   border-radius: 10px;
 }
 
+/* Category */
+
 .category-container {
   display: flex;
   flex-direction: column;
@@ -201,7 +203,7 @@ nav {
   padding: 10px 10px 10px 0;
 }
 
-.category-container li {
+.category-container .category {
   list-style: none;
   border: 1px solid #000;
   padding: 5px 10px;
@@ -266,9 +268,13 @@ nav {
 .img-product img {
   width: 16rem;
   height: 20rem;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .img-product img:hover {
   transform: scale(1.1);
+}
+
+.img-product:hover {
+  border: 3px solid #e06928;
 }
