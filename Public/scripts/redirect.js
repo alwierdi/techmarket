@@ -1,17 +1,17 @@
 function openLogin() {
-  window.location.href = "loginPage.html";
+  window.location.href = "/Public/loginPage.html";
 }
 
 function openHome() {
-  window.location.href = "dashboard.html";
+  window.location.href = "/Public/dashboard.html";
 }
 
 function openProduct() {
-  window.location.href = "product.html";
+  window.location.href = "/Public/product.html";
 }
 
 function openCart() {
-  window.location.href = "cart.html";
+  window.location.href = "/Public/cart.html";
 }
 
 const products = [

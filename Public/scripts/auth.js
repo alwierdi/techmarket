@@ -20,7 +20,7 @@ signupButton.addEventListener("click", async (event) => {
 
   try {
     // Kirim data ke backend menggunakan Fetch API
-    const response = await fetch('/api/signup', {
+    const response = await fetch('http://localhost:8080/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ signupButton.addEventListener("click", async (event) => {
     if (response.ok) {
       // Jika berhasil, lakukan sesuatu (misalnya redirect ke halaman lain)
       console.log('Signup berhasil!');
-      window.location.href = 'loginPage.html';
+      window.location.href = '/Public/loginPage.html';
     } else {
       // Jika gagal, tampilkan pesan error
       const error = await response.json();
