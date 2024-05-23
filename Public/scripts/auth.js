@@ -2,7 +2,7 @@
 const usernameInput = document.getElementById("usernameFloatingInput");
 const emailInput = document.getElementById("emailFloatingInput");
 const passwordInput = document.getElementById("floatingPassword");
-const signupButton = document.querySelector('.signup');
+const signupButton = document.querySelector(".signup");
 
 // Tambahkan event listener ke tombol signup
 signupButton.addEventListener("click", async (event) => {
@@ -20,25 +20,25 @@ signupButton.addEventListener("click", async (event) => {
 
   try {
     // Kirim data ke backend menggunakan Fetch API
-    const response = await fetch('http://localhost:8080/signup', {
-      method: 'POST',
+    const response = await fetch("http://localhost:8080/auth/register", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, email, password })
+      body: JSON.stringify({ username, email, password }),
     });
 
     if (response.ok) {
       // Jika berhasil, lakukan sesuatu (misalnya redirect ke halaman lain)
-      console.log('Signup berhasil!');
-      window.location.href = '/Public/loginPage.html';
+      console.log("Signup berhasil!");
+      window.location.href = "/Public/loginPage.html";
     } else {
       // Jika gagal, tampilkan pesan error
       const error = await response.json();
-      console.error('Signup gagal:', error.message);
+      console.error("Signup gagal:", error.message);
     }
   } catch (error) {
     // Tangani error lainnya
-    console.error('Terjadi kesalahan:', error);
+    console.error("Terjadi kesalahan:", error);
   }
 });

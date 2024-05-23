@@ -2,9 +2,10 @@ package com.TechMarket.TechMarketProto.entity;
 
 import jakarta.persistence.*;
 
-
 import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "local_user")
@@ -17,12 +18,14 @@ public class LocalUser {
     @Column(name = "username", nullable = false, unique = true, length = 50)
     private String username;
 
-    @Column(name = "password", nullable = false,  length = 50)
+    @JsonIgnore
+    @Column(name = "password", nullable = false, length = 50)
     private String password;
 
-    @Column(name = "email", nullable = false,unique = true, length = 320)
+    @Column(name = "email", nullable = false, unique = true, length = 320)
     private String email;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE, orphanRemoval = true)
     private List<Address> addresses = new ArrayList<>();
 
@@ -43,21 +46,21 @@ public class LocalUser {
         this.email = email;
     }
 
-//    public String getToken() {
-//        return token;
-//    }
-//
-//    public void setToken(String token) {
-//        this.token = token;
-//    }
-//
-//    public long getToken_expired_at() {
-//        return token_expired_at;
-//    }
-//
-//    public void setToken_expired_at(long token_expired_at) {
-//        this.token_expired_at = token_expired_at;
-//    }
+    // public String getToken() {
+    // return token;
+    // }
+    //
+    // public void setToken(String token) {
+    // this.token = token;
+    // }
+    //
+    // public long getToken_expired_at() {
+    // return token_expired_at;
+    // }
+    //
+    // public void setToken_expired_at(long token_expired_at) {
+    // this.token_expired_at = token_expired_at;
+    // }
 
     public long getUser_id() {
         return user_id;
