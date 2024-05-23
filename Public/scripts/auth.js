@@ -4,7 +4,6 @@ const emailInput = document.getElementById("emailFloatingInput");
 const passwordInput = document.getElementById("floatingPassword");
 const signupButton = document.querySelector(".signup");
 
-
 signupButton.addEventListener("click", async (event) => {
   // event.preventDefault(); // Cegah pengiriman form secara default
 
@@ -20,8 +19,8 @@ signupButton.addEventListener("click", async (event) => {
 
   try {
     // Kirim data ke backend menggunakan Fetch API
-    const response = await fetch('http://localhost:8080/signup', {
-      method: 'POST',
+    const response = await fetch("http://localhost:8080/auth/register", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -39,6 +38,6 @@ signupButton.addEventListener("click", async (event) => {
     }
   } catch (error) {
     // Tangani error lainnya
-    console.error('Terjadi kesalahan:', error);
+    console.error("Terjadi kesalahan:", error);
   }
 });
