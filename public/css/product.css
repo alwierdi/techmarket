@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: auto;
+  /* background-color: red; */
+}
+
+/* background */
+.background {
+  width: 886px;
+  height: 1061px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../img/background-home.png");
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Search Component */
+.tools-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.9rem;
+  padding: 2.5rem;
+  height: 2.5rem;
+  gap: 15px;
+}
+
+.tools-container img {
+  width: 120px;
+  height: 90px;
+  padding-top: 10px;
+}
+
+.hovering {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hovering:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.tools-container p {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 300px;
+}
+
+.tools-container .tech {
+  color: #f07a3c;
+}
+
+.tools-container .market {
+  color: white;
+  text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange,
+    1px 1px 0 orange;
+}
+
+.profile-icon {
+  margin-left: 300px;
+  cursor: pointer;
+}
